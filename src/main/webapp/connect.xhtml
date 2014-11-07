@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Connexion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <!-- menu -->
+        <div class="navbar navbar-default navbar-static-top" role="navigation">
+
+       <div class="container">
+           <div class="navbar-header">
+               <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="temp.xhtml">
+                           <span class="glyphicon glyphicon-home"></span>
+                </a>
+
+               <a class="navbar-brand" href="#">
+
+                   Membres
+
+               </a>
+           </div>
+           <div class="navbar-collapse collapse">
+               <ul class="nav navbar-nav">
+                   <li class="active">
+                       <a href="#">
+
+                           Evenement
+
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#about">
+
+                           Medias
+
+                       </a>
+                   </li>
+                   <li>
+                       <a href="#contact">
+
+                           Contact
+
+                       </a>
+                   </li>
+                 <!-- 
+                   <li class="dropdown">
+                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+
+                           Dropdown 
+
+                           <span class="caret"></span>
+                       </a>
+                       <ul class="dropdown-menu" role="menu">
+                           <li>
+                               <a href="#">
+
+                                   Action
+
+                               </a>
+                           </li>
+                           <li>
+                               <a href="#">
+
+                                   Another action
+
+                               </a>
+                           </li>
+                           <li>
+                               <a href="#">
+
+                                   Something else here
+
+                               </a>
+                           </li>
+                           <li class="divider"></li>
+                           <li class="dropdown-header">
+
+                               Nav header
+
+                           </li>
+                           <li>
+                               <a href="#">
+
+                                   Separated link
+
+                               </a>
+                           </li>
+                           <li>
+                               <a href="#">
+
+                                   One more separated link
+
+                               </a>
+                           </li>
+                       </ul>
+                   </li>
+                 --> 
+               </ul>
+               <ul class="nav navbar-nav navbar-right">
+                   <li>
+                       <a href="../navbar/">
+
+                           Se connecter
+
+                       </a>
+                   </li>
+                   <li class="active">
+                       <a href="./">
+
+                           S'inscrire
+
+                       </a>
+                   </li>
+               </ul>
+           </div>
+           <!--
+
+           /.nav-collapse 
+
+           --> 
+       </div>    
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+        <!-- connexion -->
+        <div class="container">    
+        <div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title">Sign In</div>
+                        <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                            
+                            <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="user" value="" placeholder="Pseudo"></input>
+                            </div>
+                                
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="Mot de passe"></input>
+                             </div>
+                                    
+
+                                
+                            <div class="input-group">
+                                      <div class="checkbox">
+                                        <label>
+                                            <input id="login-remember" type="checkbox" name="remember" value="1"> se souvenir</input>
+                                        </label>
+                                      </div>
+                                    </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" href="#" class="btn btn-success">Se connecter  </a>
+                                      <a id="btn-fblogin" href="#" class="btn btn-primary">Se connecter avec Facebook</a>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Je ne suis pas inscrit ! 
+                                        <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                            S'inscrire 
+                                        </a>
+                                        </div>
+                                    </div>
+                                </div>    
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+        <div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Inscription</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+                                
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Erreur:</p>
+                                    <span></span>
+                                </div>
+                                    
+                                
+                                  
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Adresse mail</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="__________@____.___"></input>
+                                    </div>
+                                </div>
+                                    
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">Nom</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="Nom"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Prénom</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Prenom"></input>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Mot de passe</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Mot de passe"></input>
+                                    </div>
+                                </div>
+                                    
+                              
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> <!--&nbsp-->S'inscrire</button>
+                                        <span style="margin-left:8px;">ou</span>  
+                                    </div>
+                                </div>
+                                
+                                <div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+                                    
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-fbsignup" type="button" class="btn btn-primary"><i class="icon-facebook"></i> S'inscrire avec Facebook</button>
+                                    </div>                                           
+                                        
+                                </div>
+                                
+                                
+                                
+                            </form>
+                         </div>
+                    </div>
+
+               
+               
+                
+         </div> 
+    </div>
+    
+    </body>
+</html>
